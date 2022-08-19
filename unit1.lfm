@@ -14,12 +14,12 @@ object Form1: TForm1
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 10
-    Height = 32
-    Top = 38
+    Height = 23
+    Top = 35
     Width = 300
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Around = 10
-    ItemHeight = 24
+    ItemHeight = 15
     OnChange = cbbAppPropChange
     TabOrder = 0
     Text = 'cbbAppProp'
@@ -28,9 +28,9 @@ object Form1: TForm1
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     Left = 10
-    Height = 18
+    Height = 15
     Top = 10
-    Width = 122
+    Width = 106
     BorderSpacing.Around = 10
     Caption = 'Show button glyphs'
   end
@@ -42,7 +42,7 @@ object Form1: TForm1
     AnchorSideRight.Side = asrBottom
     Left = 10
     Height = 25
-    Top = 100
+    Top = 88
     Width = 300
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Top = 20
@@ -59,11 +59,12 @@ object Form1: TForm1
     AnchorSideRight.Side = asrBottom
     Left = 10
     Height = 25
-    Top = 135
+    Top = 123
     Width = 300
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Around = 10
     Caption = 'Custom'
+    OnClick = btn_customClick
     TabOrder = 2
   end
   object AppProp: TApplicationProperties

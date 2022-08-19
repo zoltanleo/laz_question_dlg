@@ -17,6 +17,7 @@ type
     btn_custom: TButton;
     cbbAppProp: TComboBox;
     Label1: TLabel;
+    procedure btn_customClick(Sender: TObject);
     procedure btn_propappClick(Sender: TObject);
     procedure cbbAppPropChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -26,6 +27,19 @@ type
 
   end;
 
+const
+  mrNoneCust=      20;
+  mrOkCust=        mrNoneCust + 1;
+  mrCancelCust=    mrNoneCust + 2;
+  mrAbortCust=     mrNoneCust + 3;
+  mrRetryCust=     mrNoneCust + 4;
+  mrIgnoreCust=    mrNoneCust + 5;
+  mrYesCust=       mrNoneCust + 6;
+  mrNoCust=        mrNoneCust + 7;
+  mrAllCust=       mrNoneCust + 8;
+  mrYesToAllCust=  mrNoneCust + 10;
+  mrCloseCust=     mrNoneCust + 11;
+  mrLastCust=      mrCloseCust;
 var
   Form1: TForm1;
 
@@ -67,6 +81,19 @@ begin
               mrYes,'Yep',
               mrNo,'Nope',
               mrAll,'I don''t no'
+              ],
+              0);
+end;
+
+procedure TForm1.btn_customClick(Sender: TObject);
+begin
+  QuestionDlg('Question',
+              'Are U sure?',
+              mtInformation,
+              [
+              mrYesCust,'Yep',
+              mrNoCust,'Nope',
+              mrAllCust,'I don''t no'
               ],
               0);
 end;
