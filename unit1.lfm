@@ -1,0 +1,58 @@
+object Form1: TForm1
+  Left = 338
+  Height = 240
+  Top = 30
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  object cbbAppProp: TComboBox
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Label1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 32
+    Top = 38
+    Width = 300
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 10
+    ItemHeight = 24
+    OnChange = cbbAppPropChange
+    TabOrder = 0
+    Text = 'cbbAppProp'
+  end
+  object Label1: TLabel
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    Left = 10
+    Height = 18
+    Top = 10
+    Width = 122
+    BorderSpacing.Around = 10
+    Caption = 'Show button glyphs'
+  end
+  object Button1: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = cbbAppProp
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 25
+    Top = 100
+    Width = 300
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 20
+    BorderSpacing.Around = 10
+    Caption = 'test'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object AppProp: TApplicationProperties
+    Left = 92
+    Top = 120
+  end
+end
