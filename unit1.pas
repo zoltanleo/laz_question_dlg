@@ -78,9 +78,15 @@ begin
               'Are U sure?',
               mtInformation,
               [
+              {$IFNDEF DARWIN}
               mrYes,'Yep',
               mrNo,'Nope',
               mrAll,'I don''t no'
+              {$ELSE}
+              mrAll,'I don''t no',
+              mrNo,'Nope',
+              mrYes,'Yep'
+              {$ENDIF}
               ],
               0);
 end;
@@ -91,9 +97,15 @@ begin
               'Are U sure?',
               mtInformation,
               [
+              {$IFNDEF DARWIN}
               mrYesCust,'Yep',
               mrNoCust,'Nope',
               mrAllCust,'I don''t no'
+              {$ELSE}
+              mrAllCust,'I don''t no',
+              mrNoCust,'Nope',
+              mrYesCust,'Yep'
+              {$ENDIF}
               ],
               0);
 end;
