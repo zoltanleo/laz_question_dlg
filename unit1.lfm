@@ -34,7 +34,7 @@ object Form1: TForm1
     BorderSpacing.Around = 10
     Caption = 'Show button glyphs'
   end
-  object Button1: TButton
+  object btn_propapp: TButton
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = cbbAppProp
     AnchorSideTop.Side = asrBottom
@@ -47,12 +47,27 @@ object Form1: TForm1
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Top = 20
     BorderSpacing.Around = 10
-    Caption = 'test'
-    OnClick = Button1Click
+    Caption = 'App property'
+    OnClick = btn_propappClick
     TabOrder = 1
   end
+  object btn_custom: TButton
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = btn_propapp
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 10
+    Height = 25
+    Top = 135
+    Width = 300
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Around = 10
+    Caption = 'Custom'
+    TabOrder = 2
+  end
   object AppProp: TApplicationProperties
-    Left = 92
-    Top = 120
+    Left = 64
+    Top = 72
   end
 end

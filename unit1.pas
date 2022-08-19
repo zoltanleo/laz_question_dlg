@@ -13,10 +13,11 @@ type
 
   TForm1 = class(TForm)
     AppProp: TApplicationProperties;
-    Button1: TButton;
+    btn_propapp: TButton;
+    btn_custom: TButton;
     cbbAppProp: TComboBox;
     Label1: TLabel;
-    procedure Button1Click(Sender: TObject);
+    procedure btn_propappClick(Sender: TObject);
     procedure cbbAppPropChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -57,7 +58,7 @@ begin
   end;
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.btn_propappClick(Sender: TObject);
 begin
   QuestionDlg('Question',
               'Are U sure?',
